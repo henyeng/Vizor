@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deadline Viz</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="app">
+  <header id="header">
+    <div class="header-left">
+      <h1 class="logo">Vizor</h1>
+    </div>
+    <div class="header-right">
+      <button class="btn" id="btn-add-source">+ Source</button>
+      <button class="btn btn-primary" id="btn-add-deadline">+ Deadline</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <aside id="sources-panel">
+      <div id="sources-list"></div>
+    </aside>
+
+    <section id="calendar-area">
+      <div id="calendar-container">
+        <div id="calendar-scroll">
+          <div id="calendar-head"></div>
+          <div id="calendar-body"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <span id="footer-date"></span>
+    <div class="footer-controls">
+      <button class="btn btn-small" id="btn-zoom-out">−</button>
+      <span id="zoom-label">Week</span>
+      <button class="btn btn-small" id="btn-zoom-in">+</button>
+      <button class="btn btn-small" id="btn-today">Today</button>
+    </div>
+  </footer>
+</div>
+
+<div id="modal-overlay" class="hidden">
+  <div id="modal" class="modal">
+    <div class="modal-header">
+      <h2 id="modal-title"></h2>
+      <button class="btn-close" id="btn-modal-close">&times;</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<div id="tooltip" class="hidden"></div>
+
+<script src="js/api.js"></script>
+<script src="js/sources.js"></script>
+<script src="js/calendar.js"></script>
+<script src="js/modals.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
